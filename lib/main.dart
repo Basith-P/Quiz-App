@@ -39,10 +39,6 @@ class _MyAppState extends State<MyApp> {
               questions[_questionIndex],
             ),
             ElevatedButton(
-              child: Text('Answer 1'),
-              onPressed: _answerQuestion,
-            ),
-            ElevatedButton(
               child: Text('Answer 2'),
               onPressed: _answerQuestion,
             ),
