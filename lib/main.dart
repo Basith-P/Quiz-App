@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
         {'text': 'Black', 'score': 1},
         {'text': 'Blue', 'score': 3},
         {'text': 'Green', 'score': 6},
-        {'text': 'White', 'score': 9},
+        {'text': 'White', 'score': 10},
       ]
     },
     {
@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
         {'text': 'Lion', 'score': 1},
         {'text': 'Fox', 'score': 3},
         {'text': 'Dog', 'score': 6},
-        {'text': 'Cat', 'score': 9},
+        {'text': 'Cat', 'score': 10},
       ]
     },
     {
@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
         {'text': 'Grapes', 'score': 1},
         {'text': 'Orange', 'score': 3},
         {'text': 'Banana', 'score': 6},
-        {'text': 'Apple', 'score': 9},
+        {'text': 'Apple', 'score': 10},
       ]
     },
   ];
