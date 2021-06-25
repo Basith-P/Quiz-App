@@ -72,18 +72,25 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.dark(),
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Color(0xff000111),
-          appBar: AppBar(
-            title: Text('Personality Quiz'),
-          ),
-          body: _questionIndex < _questions.length
-              ? Quiz(
-                  questions: _questions,
-                  questionIndex: _questionIndex,
-                  answerQuestion: _answerQuestion,
-                )
-              : Result(_totoalScore, _resetQuiz),
-        ),
+            backgroundColor: Color(0xff000111),
+            appBar: AppBar(
+              backgroundColor: Colors.amber,
+              title: Text(
+                'Personality Quiz',
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+            ),
+            body: Container(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: _questionIndex < _questions.length
+                  ? Quiz(
+                      questions: _questions,
+                      questionIndex: _questionIndex,
+                      answerQuestion: _answerQuestion,
+                    )
+                  : Result(_totoalScore, _resetQuiz),
+            )),
       ),
     );
   }

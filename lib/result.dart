@@ -45,8 +45,10 @@ class Result extends StatelessWidget {
         const SizedBox(height: 50),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: Colors.amber,
             onPrimary: Colors.black,
+            padding: EdgeInsets.all(20),
+            primary: Colors.amber,
+            shape: StadiumBorder(),
           ),
           child: Text('Reset'),
           onPressed: resetHandler,
