@@ -48,6 +48,13 @@ class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
   var _totoalScore = 0;
 
+  void _resetQuiz() {
+    setState(() {
+      _questionIndex = 0;
+      _totoalScore = 0;
+    });
+  }
+
   void _answerQuestion(int score) {
     setState(() {
       _questionIndex += 1;
@@ -63,18 +70,20 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: Scaffold(
-        backgroundColor: Color(0xff000111),
-        appBar: AppBar(
-          title: Text('Personality Quiz'),
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Color(0xff000111),
+          appBar: AppBar(
+            title: Text('Personality Quiz'),
+          ),
+          body: _questionIndex < _questions.length
+              ? Quiz(
+                  questions: _questions,
+                  questionIndex: _questionIndex,
+                  answerQuestion: _answerQuestion,
+                )
+              : Result(_totoalScore, _resetQuiz),
         ),
-        body: _questionIndex < _questions.length
-            ? Quiz(
-                questions: _questions,
-                questionIndex: _questionIndex,
-                answerQuestion: _answerQuestion,
-              )
-            : Result(_totoalScore),
       ),
     );
   }
